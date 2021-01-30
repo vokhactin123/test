@@ -28,7 +28,7 @@ function ListSessionHomeRightItem(props) {
           : `list__session__filmShow__disabled session__filmShow__item`
       }
     >
-      <a href={`/Booking/${item.maLichChieu}`} target="_blank">
+      <a target="_blank">
         {format("hh:mm", new Date(item?.ngayChieuGioChieu))}
       </a>
       ~{TimeEnd + format(":mm", new Date(item?.ngayChieuGioChieu))}

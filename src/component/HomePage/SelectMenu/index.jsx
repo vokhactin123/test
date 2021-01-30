@@ -43,13 +43,13 @@ function SelectMenu(props) {
       time !== null
     ) {
       return (
-        <NavLink
-          to={`/Booking/${codeShowTime}`}
+        <a
+          // to={`/Booking/${codeShowTime}`}
           target="_blank"
           className="btn_bookingTicketNow btnBookingActive"
         >
           <span className="activeTextBookingNow"> Mua vé ngay</span>
-        </NavLink>
+        </a>
       );
     }
     return (
