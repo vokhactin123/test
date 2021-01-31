@@ -44,7 +44,7 @@ function SelectMenuMovieTheater(props) {
   });
   let CumRapArr = [];
   if (listCinemaTheater.heThongRapChieu !== undefined) {
-    let CumRapChieu = listCinemaTheater.heThongRapChieu.map((item, index) => {
+    let CumRapChieu = listCinemaTheater?.heThongRapChieu?.map((item, index) => {
       return item.cumRapChieu;
     });
     // console.log(CumRapChieu);

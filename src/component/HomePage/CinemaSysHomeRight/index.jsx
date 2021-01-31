@@ -64,7 +64,7 @@ function CinemaSysHomeRight(props) {
             }
           }
           // console.log(listMovie);
-          if (arrMovie.length > 0) {
+          if (arrMovie?.length > 0) {
             console.log(arrMovie);
             return arrMovie?.map((item, index) => {
               return <CinemaSysHomeRightItem item={item} key={index} />;

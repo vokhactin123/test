@@ -17,7 +17,7 @@ function CinemaSysHomeLeft(props) {
   }
   // console.log(listCinemaSys);
   function ShowListCinemaSys() {
-    return listCinemaSys.map((item, index) => {
+    return listCinemaSys?.map((item, index) => {
       return (
         <CinemaSysHomeLeftItem
           setTrangThai={props.setTrangThai}

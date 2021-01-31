@@ -24,9 +24,11 @@ function SelectMenuTime(props) {
   function showListTime(statusDate) {
     console.log(statusDate.toString());
     if (statusDate.toString() !== getCurrentDay().toString()) {
-      return listTime?.map((item, index) => {
-        return <SelectMenuTimeItem item={item} key={index} />;
-      });
+      if (listTime) {
+        return listTime?.map((item, index) => {
+          return <SelectMenuTimeItem item={item} key={index} />;
+        });
+      }
     } else {
       let listTimeFilter = listTime?.filter((item) => {
         return (
@@ -34,7 +36,7 @@ function SelectMenuTime(props) {
           getTimeCurrent().toString()
         );
       });
-      if (listTimeFilter.length > 0) {
+      if (listTimeFilter?.length > 0) {
         return listTimeFilter?.map((item, index) => {
           return <SelectMenuTimeItem item={item} key={index} />;
         });

@@ -183,8 +183,12 @@ function ListTabFilm(props) {
           className="tab-content wp__tab__content container-fluid container-fluid--fixed"
           id="myTabContent"
         >
-          <TabFilmShowing listMovie={getFilmShowing()} />
-          <TabFilmComingSoon listMovie={getFilmComingSoon()} />
+          <TabFilmShowing
+            listMovie={getFilmShowing() ? getFilmShowing() : ""}
+          />
+          <TabFilmComingSoon
+            listMovie={getFilmComingSoon() ? getFilmComingSoon() : ""}
+          />
         </div>
       </section>
     </div>
