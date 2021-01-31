@@ -13,9 +13,9 @@ function App() {
               <Home />
             </Layout>
           </Route>
-          <Route path="/Login">
+          {/* <Route path="/Login">
             <Login />
-          </Route>
+          </Route> */}
         </Switch>
       </BrowserRouter>
     </>
