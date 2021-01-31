@@ -16,7 +16,7 @@ function ListFilm(props) {
             movieItem={listMovie[i]}
             code={i}
             key={i + "keynesad"}
-            comingProps={props.comingProps}
+            comingProps={props.comingProps ? props.comingProps : ""}
           />
         );
       }
@@ -24,7 +24,7 @@ function ListFilm(props) {
       for (let i = firstItem; i < listMovie?.length; i++) {
         listItemOnOnePage.push(
           <FilmItem
-            movieItem={listMovie[i]}
+            movieItem={listMovie[i] ? listMovie[i] : ""}
             key={i + "keyne12344"}
             code={i}
             comingProps={props.comingProps}

@@ -24,10 +24,10 @@ function Home(props) {
         {isLoading ? <Loading /> : ""}
         <Banner />
         <SelectMenu />
-        <ListTabFilm />
+        {/* <ListTabFilm />
         {closeTrailer ? "" : <ModalHome />}
         <CinemaSysHome />
-        <Application />
+        <Application /> */}
       </div>
     );
   }

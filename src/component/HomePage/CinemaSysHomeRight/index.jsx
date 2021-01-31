@@ -26,11 +26,11 @@ function CinemaSysHomeRight(props) {
   // console.log(getCurrentDay());
   function ShowListFilmByLogo() {
     if (inFoShowTimeOfSys[0] !== undefined) {
-      let listMaCumRap = inFoShowTimeOfSys[0].lstCumRap.map((i, idx) => {
+      let listMaCumRap = inFoShowTimeOfSys[0]?.lstCumRap?.map((i, idx) => {
         return i.maCumRap;
       });
       // console.log(listMaCumRap);
-      let vitri = listMaCumRap.indexOf(CinemaBrandSelected);
+      let vitri = listMaCumRap?.indexOf(CinemaBrandSelected);
       // console.log(vitri);
       if (vitri === -1) {
         return (
@@ -40,7 +40,7 @@ function CinemaSysHomeRight(props) {
         );
       } else {
         // console.log(listMovie);
-        if (listMovie.length > 0) {
+        if (listMovie?.length > 0) {
           let date = new Date();
           let arrMovie = [];
           for (let i = 0; i < listMovie.length; i++) {
@@ -49,7 +49,7 @@ function CinemaSysHomeRight(props) {
                 return (
                   format(
                     "dd/MM/yyyy",
-                    new Date(item.ngayChieuGioChieu)
+                    new Date(item ? item?.ngayChieuGioChieu : "")
                   ).toString() ===
                     format("dd/MM/yyyy", new Date(date)).toString() &&
                   format(
